@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { profile } from "../data/profile";
+import { DEFAULT_SUBJECT, mailto } from "../lib/mail";
 
 const links = [
   { id: "about", label: "About" },
@@ -88,7 +89,7 @@ export default function Nav() {
           ))}
         </nav>
 
-        <a className="nav__cta" href={`mailto:${profile.email}`}>
+        <a className="nav__cta" href={mailto(profile.email, DEFAULT_SUBJECT)}>
           Hire me
         </a>
 
@@ -111,7 +112,7 @@ export default function Nav() {
         ))}
         <a
           className="nav__drawerCta"
-          href={`mailto:${profile.email}`}
+          href={mailto(profile.email, DEFAULT_SUBJECT)}
           onClick={() => setOpen(false)}
         >
           Hire me

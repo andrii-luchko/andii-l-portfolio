@@ -1,13 +1,10 @@
 import portrait from "../assets/andrii.jpg";
-import { profile, projects } from "../data/profile";
+import { profile } from "../data/profile";
 import { ArrowIcon, DownloadIcon } from "./Icons";
 import PhoneMock from "./PhoneMock";
 
-const shipped = projects.filter((p) => p.appStore || p.googlePlay).length;
-
 const stats = [
   { value: `${profile.yearsExperience}+`, label: "Years with Flutter" },
-  { value: `${shipped}`, label: "Apps live on stores" },
   { value: "iOS · Android", label: "Cross-platform" },
 ];
 

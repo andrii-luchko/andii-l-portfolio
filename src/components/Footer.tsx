@@ -1,4 +1,5 @@
 import { profile } from "../data/profile";
+import { DEFAULT_SUBJECT, mailto } from "../lib/mail";
 import { GithubIcon, MailIcon } from "./Icons";
 
 export default function Footer() {
@@ -10,7 +11,7 @@ export default function Footer() {
         </span>
 
         <div className="footer__links">
-          <a href={`mailto:${profile.email}`} aria-label="Email">
+          <a href={mailto(profile.email, DEFAULT_SUBJECT)} aria-label="Email">
             <MailIcon className="footer__icon" />
           </a>
           <a

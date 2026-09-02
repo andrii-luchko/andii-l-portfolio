@@ -1,4 +1,5 @@
 import { profile } from "../data/profile";
+import { DEFAULT_SUBJECT, mailto } from "../lib/mail";
 import { ArrowIcon, GithubIcon, MailIcon } from "./Icons";
 
 export default function Contact() {
@@ -17,11 +18,12 @@ export default function Contact() {
           </p>
 
           <div className="contact__actions">
-            <a className="btn btn--primary" href={`mailto:${profile.email}`}>
+            <a className="btn btn--primary" href={mailto(profile.email, DEFAULT_SUBJECT)}>
               <MailIcon className="btn__icon" />
               {profile.email}
               <ArrowIcon className="btn__icon btn__icon--trail" />
             </a>
+
             <a
               className="btn btn--ghost"
               href={profile.github}
