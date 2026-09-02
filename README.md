@@ -40,14 +40,20 @@ These are marked with `TODO` comments in `src/data/profile.ts`:
    are hyperlinked in the CV PDF but weren't recoverable from its text. Replace them, or the
    badges will link nowhere.
 2. **CV download** — the hero's "Download CV" button points at
-   `/Andrii-L-Flutter-Developer.pdf`. Drop the PDF into `public/` under exactly that name,
-   or change `profile.cvUrl`. **Right now this link 404s.**
+   `/Andrii-L-Flutter-Developer.pdf`. Copy the CV into `public/` under exactly that name,
+   or change `profile.cvUrl`. **Right now this link 404s.** Note that adding it publishes the
+   PDF at a public URL — confirm that's wanted before deploying.
 3. **LinkedIn** — `profile.linkedin` is empty and unused. Add the URL and wire it into
    `Contact.tsx` / `Footer.tsx` if wanted.
-4. **Photo** — the hero uses a decorative CSS phone mock, not a headshot. If Andrii wants the
-   CV photo on the site, add it to `src/assets/` and place it in `Hero.tsx`.
-5. **Screenshots** — real store screenshots inside the phone frame would land much harder than
+4. **Screenshots** — real store screenshots inside the phone frame would land much harder than
    the placeholder UI. See `src/components/PhoneMock.tsx`.
+
+## The hero photo
+
+`src/assets/andrii.jpg` was extracted from the CV PDF (the source image was a 1086×1448
+Flate-compressed RGB stream), then resized to 760px wide and re-encoded as JPEG — 57 KB.
+If a better original exists, drop it in at the same path; the hero crops with
+`object-position: 50% 22%` so a head-and-shoulders frame works best.
 
 ## Theme
 

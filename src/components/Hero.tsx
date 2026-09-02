@@ -1,3 +1,4 @@
+import portrait from "../assets/andrii.jpg";
 import { profile, projects } from "../data/profile";
 import { ArrowIcon, DownloadIcon } from "./Icons";
 import PhoneMock from "./PhoneMock";
@@ -59,7 +60,28 @@ export default function Hero() {
         </div>
 
         <div className="hero__visual">
-          <PhoneMock />
+          <div className="portrait">
+            <span className="portrait__frame" aria-hidden="true" />
+            <div className="portrait__media">
+              <img
+                src={portrait}
+                alt={`${profile.name}, ${profile.role}`}
+                width={760}
+                height={1013}
+                loading="eager"
+                decoding="async"
+              />
+            </div>
+            <div className="portrait__phone">
+              <PhoneMock />
+            </div>
+
+            {/* full-size chips live here rather than inside the scaled phone,
+                where they would render too small to read */}
+            <span className="portrait__chip portrait__chip--1">Flutter</span>
+            <span className="portrait__chip portrait__chip--2">BLoC</span>
+            <span className="portrait__chip portrait__chip--3">Firebase</span>
+          </div>
         </div>
       </div>
     </section>
