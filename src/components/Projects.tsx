@@ -1,6 +1,6 @@
 import type { CSSProperties } from "react";
 import { projects, type Project } from "../data/profile";
-import { AppleIcon, PlayIcon } from "./Icons";
+import { AppleIcon, ArrowIcon, PlayIcon } from "./Icons";
 import SectionHead from "./SectionHead";
 
 function StoreLinks({ project }: { project: Project }) {
@@ -46,6 +46,17 @@ function StoreLinks({ project }: { project: Project }) {
             <small>Get it on</small>
             Google Play
           </span>
+        </a>
+      )}
+      {project.website && (
+        <a
+          className="siteLink"
+          href={project.website}
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          Visit site
+          <ArrowIcon className="siteLink__icon" />
         </a>
       )}
     </div>

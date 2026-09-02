@@ -1165,6 +1165,31 @@
   color: var(--text-dim);
 }
 
+.siteLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.4rem;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: color 0.22s var(--ease);
+}
+
+.siteLink:hover {
+  color: var(--project-accent, var(--accent));
+}
+
+.siteLink__icon {
+  width: 15px;
+  height: 15px;
+  transition: transform 0.22s var(--ease);
+}
+
+.siteLink:hover .siteLink__icon {
+  transform: translateX(3px);
+}
+
 .storeBadge--muted {
   color: var(--text-dim);
   cursor: default;

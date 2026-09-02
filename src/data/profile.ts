@@ -137,11 +137,13 @@ export type Project = {
   result: string;
   appStore?: string;
   googlePlay?: string;
+  website?: string;
   status?: string;
   accent: string;
 };
 
-// TODO: replace the "#" store links with the real App Store / Google Play URLs from the CV.
+// Store + marketing links taken from the hyperlinks embedded in the CV PDF.
+// App Store URLs are left country-less so Apple geo-redirects each visitor.
 export const projects: Project[] = [
   {
     name: "Yollly",
@@ -172,8 +174,9 @@ export const projects: Project[] = [
     ],
     result:
       "Managed the full mobile lifecycle from architecture to App Store and Google Play release, delivering a high-performance experience for phones and tablets and ensuring Apple compliance via an autonomous on-device content moderation system.",
-    appStore: "#",
-    googlePlay: "#",
+    appStore: "https://apps.apple.com/app/yollly/id6760356103",
+    googlePlay: "https://play.google.com/store/apps/details?id=com.yollly.app.android",
+    website: "https://yollly.com/",
     accent: "#8ec63f",
   },
   {
@@ -202,8 +205,10 @@ export const projects: Project[] = [
     ],
     result:
       "Deployed to both major stores under strict guideline compliance, with a globally scalable timezone-aware notification architecture and strong engagement from the micro-goal methodology.",
-    appStore: "#",
-    googlePlay: "#",
+    appStore: "https://apps.apple.com/app/make-me-birthday/id6747773776",
+    googlePlay:
+      "https://play.google.com/store/apps/details?id=com.incode.make_me_birthday",
+    website: "https://make-me-birthday.com/",
     accent: "#4fc3f7",
   },
   {
@@ -231,8 +236,9 @@ export const projects: Project[] = [
     ],
     result:
       "Launched on the App Store and Google Play as a stable, offline-capable recovery tool, holding a steady 60 FPS in the Flame-powered stress-relief modules and measurably increasing session time during cravings.",
-    appStore: "#",
-    googlePlay: "#",
+    appStore: "https://apps.apple.com/app/gamblecount/id6749377843",
+    googlePlay: "https://play.google.com/store/apps/details?id=app.gamblecount.android",
+    website: "https://gamblecount-7a70a.web.app/",
     accent: "#b388ff",
   },
   {

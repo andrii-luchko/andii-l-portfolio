@@ -36,9 +36,8 @@ Reforge) each render role, summary, build highlights, outcome, stack chips and s
 
 These are marked with `TODO` comments in `src/data/profile.ts`:
 
-1. **Store links** — every `appStore` / `googlePlay` field is currently `"#"`. The real URLs
-   are hyperlinked in the CV PDF but weren't recoverable from its text. Replace them, or the
-   badges will link nowhere.
+1. **Verify the store links** — they were recovered from the CV PDF's link annotations and
+   have not been opened. Click each badge once before deploying.
 2. **CV download** — the hero's "Download CV" button points at
    `/Andrii-L-Flutter-Developer.pdf`. Copy the CV into `public/` under exactly that name,
    or change `profile.cvUrl`. **Right now this link 404s.** Note that adding it publishes the
